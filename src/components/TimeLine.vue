@@ -5,7 +5,7 @@
       <card 
         v-for="gif in gifs"
         :gif="gif"
-        v-bind:key="gif"
+        v-bind:key=""
         >
       </card>
     </div>

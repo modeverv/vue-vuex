@@ -25,7 +25,9 @@ export default {
     width: 60%;
     display: flex;
     margin-bottom: 60px;
-
+  }
+  .material-icons {
+    cursor: pointer;
   }
 
 </style>

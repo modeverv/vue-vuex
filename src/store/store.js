@@ -18,30 +18,33 @@ function getGIFs(query) {
 }
 
 const actions = {
-  [CHANGE_KEYWORD] ({
+  [CHANGE_KEYWORD]({
     commit
   }, keyword) {
     commit(CHANGE_KEYWORD, keyword)
   },
 
-  [SEARCH] ({
+  [SEARCH]({
     commit,
     state
   }) {
     getGIFs(state.keyword)
       .then(data => {
+        if (window.console) {
+          console.log(data)
+        }
         commit(SEARCH, data)
       })
   }
 }
 const getters = {
-    gifs: state => state.gifs
+  gifs: state => state.gifs
 }
 const mutations = {
-  [CHANGE_KEYWORD] (state, keyword) {
+  [CHANGE_KEYWORD](state, keyword) {
     state.keyword = keyword
   },
-  [SEARCH] (state, gifs) {
+  [SEARCH](state, gifs) {
     state.gifs = gifs.data
   }
 }
