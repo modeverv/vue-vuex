@@ -17,7 +17,6 @@ export default {
 </script>
 
 <style media="screen" scoped>
-
   .mdl-textfield {
     padding: 0;
     background-color: #f6f6f6;
@@ -29,5 +28,4 @@ export default {
   .material-icons {
     cursor: pointer;
   }
-
 </style>
