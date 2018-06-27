@@ -18,21 +18,18 @@ function getGIFs(query) {
 }
 
 const actions = {
-  [CHANGE_KEYWORD]({
+  'CHANGE_KEYWORD': function ({
     commit
   }, keyword) {
     commit(CHANGE_KEYWORD, keyword)
   },
 
-  [SEARCH]({
+  'SEARCH': function ({
     commit,
     state
   }) {
     getGIFs(state.keyword)
       .then(data => {
-        if (window.console) {
-          console.log(data)
-        }
         commit(SEARCH, data)
       })
   }
