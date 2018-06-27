@@ -30,6 +30,9 @@ const actions = {
   }) {
     getGIFs(state.keyword)
       .then(data => {
+        if (window.console) {
+          console.log(data)
+        }
         commit(SEARCH, data)
       })
   }
